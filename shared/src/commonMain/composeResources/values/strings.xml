@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+    <string name="app_name">Sake Shops App</string>
+    <string name="error_screen_title">Ops! Something went wrong</string>
+    <string name="error_screen_subtitle">Please try again later</string>
+    <string name="error_screen_retry">Retry</string>
+    <string name="sake_details_about_title">About this shop:</string>
+    <string name="shop_website">Visit shop website</string>
+    <string name="sake_details_address_title">Address</string>
+    <string name="open_in_maps_button">Open in Google Maps</string>
+    <string name="go_back">Go back</string>
+</resources>
+
