@@ -42,6 +42,12 @@ This project has been migrated from a KMP with separate iOs and Android UIs to  
 8. **Testability**
    - All the provided classes (networking layer, repositories, ViewModels) are easily testable thanks to the DI framework and the MVI implementation
 
+9. **No extra KMP Shared VM libraries:**
+
+ Multiple libraries exist to offer SharedViewModel on KMP. I purposedly choosed to not use them and just use a regular class instead. The scoping of the VM to the specific compose destination is handled by this framework leveraging Koin scopes, which would yield the same instances for the same destinations if the arguments doesn't change with the app on the foreground, for simplicity I didn't dig too much on this, but the logic itself can be improved. Also avoided global VMs on purpose.
+
+For state persistance accross config changes (Android) and process kills (both), we can use expect/actual SavedStateHandler objects on Android and iOs, for example, to preserve user inputs in the UI. For simplicity, didn't add that to this excercise, but can be done relatively easily with KMP data storage + @Serializable states.
+
 
 
 ## Additional notes
